@@ -1,0 +1,77 @@
+.sidebar {
+  flex-grow: 0.3;
+  height: inherit;
+}
+
+.sidebar__header {
+  height: 6vh;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ededed;
+}
+
+.sidebar__searchContainer {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.sidebar__search {
+  border-radius: 25px;
+  margin: 0px 20px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background-color: white;
+}
+
+.sidebar__search > input {
+  border: none;
+  margin: 2px;
+  padding-left: 10px;
+  outline-width: 0px;
+  width: 100%;
+  height: 3vh;
+}
+
+.sidebarchat__container {
+  display: flex;
+  flex: 1;
+  padding: 12px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.sidebarchat__container:hover {
+  background-color: #ededed;
+}
+
+.sidebarchat__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.sidebarchat__info {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebarchat__lastmessage,
+.sidebarchat__timestamp {
+  font-size: smaller;
+}
+
+.sidebarchat__lastmessage {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 25ch;
+}

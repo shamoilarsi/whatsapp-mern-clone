@@ -1,0 +1,38 @@
+.app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.background {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #dbdbd2;
+  height: 100vh;
+}
+
+.backgroundTop {
+  background-color: #009688;
+  flex-grow: 0.15;
+}
+
+.app__container {
+  margin-top: 5vh;
+  width: 70vw;
+  height: 90vh;
+  z-index: 1;
+  background-color: white;
+
+  display: flex;
+}
+
+.icon {
+  color: #919191;
+}
+
+@media only screen and (max-width: 1000px) {
+  .app__container {
+    width: 90vw;
+  }
+}
