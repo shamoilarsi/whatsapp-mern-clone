@@ -14,7 +14,7 @@ const ChatFooter = ({ roomId, user: userName }) => {
     axios.post("/new/message", {
       message: input,
       userName,
-      timestamp: new Date().toLocaleString(),
+      timestamp: new Date().toString(),
       roomId,
     });
     setInput("");

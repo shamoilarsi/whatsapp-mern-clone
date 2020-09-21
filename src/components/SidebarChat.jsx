@@ -12,7 +12,7 @@ const SidebarChat = ({ id, name, lastMessageObject, setSelectedRoom }) => {
         <div className="sidebarchat__info">
           <h4> {name} </h4>
           <p className="sidebarchat__timestamp">
-            {lastMessageObject?.timestamp.substring(12) || ""}
+            {lastMessageObject?.timestamp.substring(0, 24) || ""}
           </p>
         </div>
         {lastMessageObject?.message && (

@@ -9,7 +9,7 @@ const Message = ({ sender, message, time, isReceived }) => {
     >
       {!isReceived && <h5>{sender}</h5>}
       <p>{message}</p>
-      <b className="chat__messageBox__timestamp">{time}</b>
+      <b className="chat__messageBox__timestamp">{time.substring(0, 24)}</b>
     </div>
   );
 };

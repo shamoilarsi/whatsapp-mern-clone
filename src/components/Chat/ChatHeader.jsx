@@ -3,14 +3,14 @@ import { Avatar, IconButton } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 
-const ChatHeader = ({ room }) => {
+const ChatHeader = ({ room, lastSeen }) => {
   return (
     <div className="chatHeader__container">
       <div className="chatHeader__info">
         <Avatar src={`https://avatars.dicebear.com/api/human/${room.id}.svg`} />
         <div className="chatHeader__text">
           <h4>{room.name}</h4>
-          <p className="chatHeader__lastseen">online</p>
+          <p className="chatHeader__lastseen">{lastSeen}</p>
         </div>
       </div>
       <div>
