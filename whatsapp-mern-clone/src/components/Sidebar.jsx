@@ -16,7 +16,7 @@ const Sidebar = ({ rooms, setSelectedRoom, messages }) => {
     <div className="sidebar">
       <div className="sidebar__header">
         <div className="sidebar__headerLeft">
-          <Avatar src="https://lh3.googleusercontent.com/a-/AOh14GhX3dVuJ060MywhZDXkf1ZUz9UNto-qCociSgfis5s=s60-c-rp-br100" />
+          <Avatar src={`https://avatars.dicebear.com/api/human/tester.svg`} />
         </div>
         <div className="sidebar__headerRight">
           <IconButton className="iconButton">

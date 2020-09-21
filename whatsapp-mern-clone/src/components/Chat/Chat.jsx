@@ -8,7 +8,7 @@ import "../../styles/chat.css";
 const Chat = ({ messages, room, user }) => {
   return (
     <div className="chat__container">
-      <ChatHeader title={room.name} />
+      <ChatHeader room={room} />
       <div className="chat__main">
         <div className="chat__chats">
           {messages &&

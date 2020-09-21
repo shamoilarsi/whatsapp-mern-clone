@@ -7,7 +7,7 @@ const SidebarChat = ({ id, name, lastMessageObject, setSelectedRoom }) => {
       className="sidebarchat__container"
       onClick={() => setSelectedRoom({ id, name })}
     >
-      <Avatar src="https://lh3.googleusercontent.com/a-/AOh14GhX3dVuJ060MywhZDXkf1ZUz9UNto-qCociSgfis5s=s60-c-rp-br100" />
+      <Avatar src={`https://avatars.dicebear.com/api/human/${id}.svg`} />
       <div className="sidebarchat__text">
         <div className="sidebarchat__info">
           <h4> {name} </h4>
