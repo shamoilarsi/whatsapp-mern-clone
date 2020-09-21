@@ -7,7 +7,7 @@
 }
 
 .chatHeader__container {
-  height: 6vh;
+  height: 7vh;
   max-height: 70px;
   display: flex;
   align-items: center;
@@ -46,7 +46,8 @@
 
 .chat__messageBox {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-left: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -67,8 +68,12 @@
   top: -15px; */
   margin-bottom: 2px;
 }
+
 .chat__messageBox > p {
   font-size: small;
+}
+.chat__messageBox > b {
+  font-size: x-small;
 }
 .chat__messageBox__timestamp {
   font-size: smaller;
@@ -78,8 +83,8 @@
 }
 
 .chatFooter__container {
-  height: 6vh;
-  max-height: 70px;
+  height: 7vh;
+  max-height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,7 +103,7 @@
   width: 95%;
   border: none;
   height: 4vh;
-  max-height: 40px;
+  max-height: 30px;
   border-radius: 30px;
   padding-left: 15px;
   outline-width: 0px;
