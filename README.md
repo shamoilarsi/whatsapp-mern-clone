@@ -3,12 +3,14 @@
 ## [Live Demo](https://whatsapp-clone-1a3d4.web.app/)
 
 ## TechStack used
+
 - MongoDB
 - Express
 - React
 - Node
 
 ## Services used
+
 - [Pusher](https://pusher.com/) - MongoDB itself is not realtime. Pusher is used to get real times updates on frontend.
 - [Firebase](https://firebase.google.com/) - For hosting the React app
 - [Heroku](https://www.heroku.com/home) - For hosting the Node app

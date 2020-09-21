@@ -31,7 +31,7 @@ function App() {
       setMessages(finalMessages);
     })();
     const user = prompt(
-      "IMPORTANT - \nThis clone was only built to work on my skills.\nIt is nowhere near secure yet.\n\nIcons that have a function are colored differently. \n\nEnter Username: "
+      "IMPORTANT - \nThis clone was built to improve my skills.\nSecurity was not the main motive here.\n\nIcons that have a function are colored differently. \n\nEnter Username: "
     );
     if (user) setUser(user);
   }, []);
