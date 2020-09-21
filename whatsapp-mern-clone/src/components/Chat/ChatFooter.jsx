@@ -5,20 +5,27 @@ import AttachFileIcon from "@material-ui/icons/AttachFile";
 import MicIcon from "@material-ui/icons/Mic";
 import SendIcon from "@material-ui/icons/Send";
 
-const ChatFooter = () => {
+import axios from "../../axios";
+
+const ChatFooter = ({ roomId, user: userName }) => {
   const [input, setInput] = useState("");
   const onSend = (e) => {
     e.preventDefault();
-    alert(input);
+    axios.post("/new/message", {
+      message: input,
+      userName,
+      timestamp: new Date().toLocaleString(),
+      roomId,
+    });
     setInput("");
   };
   return (
     <div className="chatFooter__container">
       <div className="chatFooter__icons">
-        <IconButton>
+        <IconButton className="iconButton">
           <InsertEmoticonIcon className="icon" />
         </IconButton>
-        <IconButton>
+        <IconButton className="iconButton">
           <AttachFileIcon className="icon" />
         </IconButton>
       </div>
@@ -35,13 +42,16 @@ const ChatFooter = () => {
           value="Submit"
         ></button>
       </form>
-      <IconButton>
-        {input === "" ? (
+
+      {input === "" ? (
+        <IconButton className="iconButton">
           <MicIcon className="icon" />
-        ) : (
-          <SendIcon className="icon" />
-        )}
-      </IconButton>
+        </IconButton>
+      ) : (
+        <IconButton onClick={onSend}>
+          <SendIcon className="icon" style={{ color: "#2196F3" }} />
+        </IconButton>
+      )}
     </div>
   );
 };

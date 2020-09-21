@@ -7,7 +7,7 @@ const Message = ({ sender, message, time, isReceived }) => {
         isReceived && "chat__messageBox__received"
       }`}
     >
-      <h5>{sender}</h5>
+      {!isReceived && <h5>{sender}</h5>}
       <p>{message}</p>
       <p className="chat__messageBox__timestamp">{time}</p>
     </div>

@@ -5,26 +5,25 @@ import Message from "./Message";
 
 import "../../styles/chat.css";
 
-const Chat = () => {
+const Chat = ({ messages, room, user }) => {
   return (
     <div className="chat__container">
-      <ChatHeader />
+      <ChatHeader title={room.name} />
       <div className="chat__main">
         <div className="chat__chats">
-          <Message
-            sender="sender name"
-            message=" looooooong message"
-            time="12:45"
-          />
-          <Message
-            sender="sender name"
-            isReceived
-            message="another looooooong message"
-            time="12:46"
-          />
+          {messages &&
+            messages.map(({ message, timestamp, userName }, idx) => (
+              <Message
+                key={idx}
+                sender={userName}
+                message={message}
+                time={timestamp}
+                isReceived={userName === user}
+              />
+            ))}
         </div>
       </div>
-      <ChatFooter />
+      <ChatFooter roomId={room.id} user={user} />
     </div>
   );
 };

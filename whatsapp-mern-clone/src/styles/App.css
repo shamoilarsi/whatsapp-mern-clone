@@ -31,6 +31,10 @@
   color: #919191;
 }
 
+.iconButton {
+  padding: 5px 8px !important;
+}
+
 @media only screen and (max-width: 1000px) {
   .app__container {
     width: 90vw;
