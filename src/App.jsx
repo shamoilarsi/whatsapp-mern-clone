@@ -7,7 +7,7 @@ import "./styles/App.css";
 
 function App() {
   const [rooms, setRooms] = useState([]);
-  const [messages, setMessages] = useState({});
+  const [messages, setMessages] = useState(null); // {}
   const [selectedRoom, setSelectedRoom] = useState({});
   const [user, setUser] = useState("unknown");
 
@@ -65,17 +65,25 @@ function App() {
       </div>
 
       <div className="app__container">
-        <Sidebar
-          rooms={rooms}
-          messages={messages}
-          setSelectedRoom={(room) => setSelectedRoom(room)}
-        />
-        {messages && (
-          <Chat
-            user={user}
-            messages={messages[selectedRoom.id]}
-            room={selectedRoom}
-          />
+        {!messages ? (
+          <div className="app__containerLoader">
+            <div className="loader_info">
+              <div className="loader"></div>
+            </div>
+          </div>
+        ) : (
+          <>
+            <Sidebar
+              rooms={rooms}
+              messages={messages}
+              setSelectedRoom={(room) => setSelectedRoom(room)}
+            />
+            <Chat
+              user={user}
+              messages={messages[selectedRoom.id]}
+              room={selectedRoom}
+            />
+          </>
         )}
       </div>
     </div>
