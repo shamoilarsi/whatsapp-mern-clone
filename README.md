@@ -2,7 +2,7 @@
 
 ## Important links
 - #### [Live](https://whatsapp-clone-1a3d4.web.app/)
-- #### [Demo]()
+- #### [Demo](https://www.linkedin.com/posts/shamoilarsi_javascript-programming-developer-activity-6717043569347100672-E6va)
 - #### [Backend](https://github.com/shamoilarsi/whatsapp-mern-clone-backend)
 
 ## TechStack used
