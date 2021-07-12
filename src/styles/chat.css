@@ -7,7 +7,7 @@
 }
 
 .chatHeader__container {
-  height: 12vh;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,7 +83,7 @@
 }
 
 .chatFooter__container {
-  height: 12vh;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
